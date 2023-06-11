@@ -76,6 +76,11 @@ span {
   border-radius: 3px;
 }
 
+#tab {
+  grid-column: span 5;
+  aspect-ratio: 1.25 / 1;
+}
+
 @media (max-width: 780px) {
   .key {
     background-color: yellow;

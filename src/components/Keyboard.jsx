@@ -1,5 +1,6 @@
 import Key from './Key';
 import Backspace from './Backspace';
+import Tab from './Tab';
 import { useState, useEffect } from 'react';
 
 const Keyboard = ({ onKeyboard }) => {
@@ -114,11 +115,78 @@ const Keyboard = ({ onKeyboard }) => {
         secondary={'='}
       />
       <Backspace onKeyboard={onKeyboard} />
+      <Tab onKeyboard={onKeyboard} />
       <Key
         isShift={isShift}
         onKeyboard={onKeyboard}
-        primary={'A'}
-        secondary={'a'}
+        primary={'Q'}
+        secondary={'q'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'W'}
+        secondary={'w'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'E'}
+        secondary={'e'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'R'}
+        secondary={'r'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'T'}
+        secondary={'t'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'Y'}
+        secondary={'y'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'U'}
+        secondary={'u'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'I'}
+        secondary={'i'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'O'}
+        secondary={'o'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'P'}
+        secondary={'p'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'{'}
+        secondary={'['}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'}'}
+        secondary={']'}
       />
       <Key
         isShift={isShift}
