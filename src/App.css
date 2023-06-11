@@ -55,3 +55,9 @@ span {
 .key.active {
   transform: scale(0.98);
 }
+
+@media (max-width: 640px) {
+  .key {
+    background-color: yellow;
+  }
+}

@@ -6,6 +6,11 @@ const Key = ({ isShift, onKeyboard, primary, secondary, isDisabled }) => {
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('keyup', handleKeyUp);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('keyup', handleKeyUp);
+    };
   }, []);
 
   const handleKeyDown = (e) => {
@@ -13,6 +18,7 @@ const Key = ({ isShift, onKeyboard, primary, secondary, isDisabled }) => {
       setKeyDown(true);
       onKeyboard((prev) => prev + primary);
     } else if (e.key === secondary) {
+      setKeyDown(true);
       onKeyboard((prev) => prev + secondary);
     }
   };

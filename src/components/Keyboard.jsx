@@ -6,10 +6,18 @@ const Keyboard = ({ onKeyboard }) => {
 
   useEffect(() => {
     document.addEventListener('keydown', detectShiftDown);
+
+    return () => {
+      document.removeEventListener('keydown', detectShiftDown);
+    };
   }, []);
 
   useEffect(() => {
-    document.addEventListener('keyup', detectShiftUp, true);
+    document.addEventListener('keyup', detectShiftUp);
+
+    return () => {
+      document.removeEventListener('keyup', detectShiftUp);
+    };
   }, []);
 
   const detectShiftDown = (e) => {
