@@ -1,4 +1,5 @@
 import Key from './Key';
+import Backspace from './Backspace';
 import { useState, useEffect } from 'react';
 
 const Keyboard = ({ onKeyboard }) => {
@@ -37,9 +38,93 @@ const Keyboard = ({ onKeyboard }) => {
       <Key
         isShift={isShift}
         onKeyboard={onKeyboard}
+        primary={'~'}
+        secondary={'`'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'!'}
+        secondary={'1'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'@'}
+        secondary={'2'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'#'}
+        secondary={'3'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'$'}
+        secondary={'4'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'%'}
+        secondary={'5'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'^'}
+        secondary={'6'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'&'}
+        secondary={'7'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'*'}
+        secondary={'8'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'('}
+        secondary={'9'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={')'}
+        secondary={'0'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'_'}
+        secondary={'-'}
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'+'}
+        secondary={'='}
+      />
+      <Backspace onKeyboard={onKeyboard} />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
         primary={'A'}
         secondary={'a'}
-        isEnabled
+      />
+      <Key
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'A'}
+        secondary={'a'}
       />
       <Key
         isShift={isShift}
