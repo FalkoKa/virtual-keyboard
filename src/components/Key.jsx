@@ -1,6 +1,13 @@
 import { useEffect, useState } from 'react';
 
-const Key = ({ isShift, onKeyboard, primary, secondary, isDisabled }) => {
+const Key = ({
+  isShift,
+  onKeyboard,
+  primary,
+  secondary,
+  isDisabled,
+  styleId,
+}) => {
   const [keyDown, setKeyDown] = useState(false);
 
   useEffect(() => {
@@ -36,12 +43,13 @@ const Key = ({ isShift, onKeyboard, primary, secondary, isDisabled }) => {
   };
 
   if (isDisabled) {
-    return <div className="key"></div>;
+    return <div id={styleId || ''} className="key"></div>;
   } else {
     return (
       <div
         onClick={handleKeyClick}
         className={`key ${keyDown ? 'active' : ''}`}
+        id={styleId || ''}
       >
         <span>{isShift ? primary : secondary}</span>
       </div>

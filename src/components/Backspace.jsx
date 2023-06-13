@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const Key = ({ onKeyboard }) => {
+const Backspace = ({ onKeyboard }) => {
   const [keyDown, setKeyDown] = useState(false);
 
   useEffect(() => {
@@ -39,4 +39,4 @@ const Key = ({ onKeyboard }) => {
   );
 };
 
-export default Key;
+export default Backspace;

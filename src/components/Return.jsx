@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const Tab = ({ onKeyboard }) => {
+const Return = ({ onKeyboard }) => {
   const [keyDown, setKeyDown] = useState(false);
 
   useEffect(() => {
@@ -15,9 +15,9 @@ const Tab = ({ onKeyboard }) => {
 
   const handleKeyDown = (e) => {
     e.preventDefault();
-    if (e.key === 'Tab') {
+    if (e.key === 'Enter') {
       setKeyDown(true);
-      onKeyboard((prev) => prev + '    ');
+      onKeyboard((prev) => prev + '\n');
     }
   };
 
@@ -26,18 +26,18 @@ const Tab = ({ onKeyboard }) => {
   };
 
   const handleKeyClick = (e) => {
-    onKeyboard((prev) => prev + '    ');
+    onKeyboard((prev) => prev + `/n`);
   };
 
   return (
     <div
       onClick={handleKeyClick}
-      id="tab"
+      id="return"
       className={`key ${keyDown ? 'active' : ''}`}
     >
-      <span>Tab</span>
+      <span>Return</span>
     </div>
   );
 };
 
-export default Tab;
+export default Return;

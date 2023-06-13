@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const Tab = ({ onKeyboard }) => {
+const Backslash = ({ onKeyboard }) => {
   const [keyDown, setKeyDown] = useState(false);
 
   useEffect(() => {
@@ -14,10 +14,9 @@ const Tab = ({ onKeyboard }) => {
   }, []);
 
   const handleKeyDown = (e) => {
-    e.preventDefault();
-    if (e.key === 'Tab') {
+    if (e.key === `\\`) {
       setKeyDown(true);
-      onKeyboard((prev) => prev + '    ');
+      onKeyboard((prev) => prev + `\\`);
     }
   };
 
@@ -26,18 +25,19 @@ const Tab = ({ onKeyboard }) => {
   };
 
   const handleKeyClick = (e) => {
-    onKeyboard((prev) => prev + '    ');
+    onKeyboard((prev) => prev + `\\`);
   };
 
   return (
     <div
       onClick={handleKeyClick}
       id="tab"
+      style={{ display: 'flex', justifyContent: 'center' }}
       className={`key ${keyDown ? 'active' : ''}`}
     >
-      <span>Tab</span>
+      <span>\</span>
     </div>
   );
 };
 
-export default Tab;
+export default Backslash;
