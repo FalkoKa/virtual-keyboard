@@ -12,7 +12,6 @@ html {
 .keyboard {
   max-width: 1000px;
   margin: 0 auto;
-  border: 1px solid black;
   display: grid;
   grid-template-columns: repeat(60, minmax(10px, 1fr));
   grid-template-rows: repeat(5, 1fr);
@@ -61,7 +60,7 @@ span {
 
 #backspace {
   grid-column: span 8;
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 2.05 / 1;
   border-radius: 6%;
 }
 
@@ -89,6 +88,68 @@ span {
 #return {
   grid-column: span 8;
   aspect-ratio: 2.1 / 1;
+}
+
+#return:before,
+#tab:before,
+#capslock:before {
+  content: '';
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  bottom: 23%;
+  right: 10%;
+  background: linear-gradient(90deg, #232323, #4a4a4a);
+  border-radius: 3px;
+}
+
+#shift {
+  grid-column: span 10;
+  aspect-ratio: 2.6 / 1;
+}
+
+#shift:before {
+  content: '';
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  bottom: 23%;
+  right: 7%;
+  background: linear-gradient(90deg, #232323, #4a4a4a);
+  border-radius: 3px;
+}
+
+#bottom-btn {
+  grid-column: span 6;
+  aspect-ratio: 1.55 / 1;
+}
+
+#bottom-btn:before {
+  content: '';
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  bottom: 20%;
+  right: 13%;
+  background: linear-gradient(90deg, #232323, #4a4a4a);
+  border-radius: 3px;
+}
+
+#space {
+  grid-column: span 24;
+  aspect-ratio: 6.3 / 1;
+  border-radius: 7%;
+}
+
+#space:before {
+  content: '';
+  position: absolute;
+  top: 8%;
+  left: 3%;
+  bottom: 20%;
+  right: 3%;
+  background: linear-gradient(90deg, #232323, #4a4a4a);
+  border-radius: 3px;
 }
 
 @media (max-width: 780px) {
