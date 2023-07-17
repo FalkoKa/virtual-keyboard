@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Keyboard from './components/Keyboard';
 import KeyboardMobile from './components/KeyboardMobile';
+import MobileScreen from './MobileScreen';
+import DesktopScreen from './DesktopScreen';
 
 function App() {
   const [displayInput, setDisplayInput] = useState('');
@@ -20,9 +22,15 @@ function App() {
   return (
     <>
       {isDesktop ? (
-        <Keyboard onKeyboard={setDisplayInput} />
+        <div>
+          <DesktopScreen displayInput={displayInput} />
+          <Keyboard onKeyboard={setDisplayInput} />
+        </div>
       ) : (
-        <KeyboardMobile />
+        <div>
+          <MobileScreen displayInput={displayInput} />
+          <KeyboardMobile />
+        </div>
       )}
     </>
   );
