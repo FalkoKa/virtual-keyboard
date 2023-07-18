@@ -9,6 +9,49 @@ html {
   font-family: sans-serif;
 }
 
+.frame {
+  max-width: 800px;
+  min-width: 500px;
+  height: 550px;
+  background-color: #efeeeb;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.598);
+  position: relative;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #00000075;
+}
+
+.innerline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98%;
+  width: 98%;
+  border: 1px solid rgba(0, 0, 0, 0.491);
+  border-radius: 10px;
+}
+
+.innerframe {
+  border: 40px inset #e4dedc;
+  width: 85%;
+  height: 85%;
+  border-radius: 10px;
+  background: rgb(26, 26, 25);
+  background: linear-gradient(
+    48deg,
+    rgba(26, 26, 25, 1) 0%,
+    rgba(63, 72, 70, 1) 35%,
+    rgba(95, 108, 106, 1) 100%
+  );
+  padding: 20px;
+  color: white;
+}
+
 .keyboard {
   max-width: 1000px;
   margin: 0 auto;
