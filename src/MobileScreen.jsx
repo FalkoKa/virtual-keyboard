@@ -7,20 +7,23 @@ const MobileScreen = ({ displayInput }) => {
     <>
       <div className="phone">
         <div className="head">
-          <span>
-            {new Date().getHours()}:{new Date().getMinutes()}
-          </span>
+          <div className="clock">
+            {new Date().toLocaleString('ru-RU', {
+              timeZone: 'Europe/Moscow',
+              hourCycle: 'h23',
+              hour: '2-digit',
+              minute: '2-digit',
+            })}
+          </div>
           <div className="island"></div>
-          <div className="header-symbols"></div>
+          <div className="header-symbols">
+            <BiWifi2 size={19} />
+            <BsBatteryFull size={16} />
+            <PiCellSignalFull size={15} />
+          </div>
         </div>
         <div className="text-field">{displayInput}</div>
         <div className="bottom-line"></div>
-      </div>
-      <div>
-        <BiWifi2 scale={12} />
-        <BsBatteryFull scale={12} />
-        <PiCellSignalFull scale={12} />
-        test
       </div>
     </>
   );

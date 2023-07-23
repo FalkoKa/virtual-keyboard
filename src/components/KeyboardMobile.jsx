@@ -31,7 +31,7 @@ const KeyboardMobile = ({ onKeyboard }) => {
     }
   };
 
-  return <div className="keyboard">Hello</div>;
+  return <div className="keyboard"></div>;
 };
 
 export default KeyboardMobile;
