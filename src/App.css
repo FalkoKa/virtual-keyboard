@@ -7,6 +7,29 @@ html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #f3f4f6;
+}
+
+.phone {
+  position: relative;
+  height: 147mm;
+  width: 71mm;
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+}
+
+.bottom-line {
+  height: 4px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: #000000;
+  position: absolute;
+  bottom: 12px;
+  transform: translate(50%);
 }
 
 .frame {
