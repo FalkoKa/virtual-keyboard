@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Key from './Key';
 
 const KeyboardMobile = ({ onKeyboard }) => {
   const [isShift, setIsShift] = useState(false);
@@ -31,7 +32,24 @@ const KeyboardMobile = ({ onKeyboard }) => {
     }
   };
 
-  return <div className="keyboard"></div>;
+  return (
+    <div className="keyboard-mobile">
+      <Key
+        mobile={true}
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'Q'}
+        secondary={'q'}
+      />
+      {/* <Key
+        mobile={true}
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'Q'}
+        secondary={'q'}
+      /> */}
+    </div>
+  );
 };
 
 export default KeyboardMobile;

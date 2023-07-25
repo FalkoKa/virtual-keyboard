@@ -16,15 +16,26 @@ html {
   width: 71mm;
   background-color: white;
   color: black;
-  border-radius: 15px;
-  padding: 15px;
+  border-radius: 25px;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
+  overflow: hidden;
+}
+
+.padding-display {
+  padding: 15px 20px;
+  height: 65%;
 }
 
 .head {
   display: flex;
   justify-content: space-between;
+}
+
+.keyboard-mobile-container {
+  background-color: #d4d3d8;
+  height: 35%;
+  padding: 3px;
 }
 
 .clock {
@@ -140,7 +151,7 @@ html {
   border-radius: 3px;
 }
 
-span {
+.key span {
   position: absolute;
 }
 
@@ -251,8 +262,28 @@ span {
   border-radius: 3px;
 }
 
-@media (max-width: 780px) {
-  .key {
-    background-color: yellow;
-  }
+.mobile-key {
+  background-color: #ffffff;
+  width: 30px;
+  aspect-ratio: 1/1.25;
+  color: black;
+  border-radius: 5px;
+  padding: 5px;
+  user-select: none;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.mobile-key:hover {
+  -webkit-box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+  border-bottom: none;
+}
+
+.mobile-key:active {
+  background-color: #f1f1f1;
 }

@@ -29,7 +29,6 @@ function App() {
       ) : (
         <div>
           <MobileScreen displayInput={displayInput} />
-          <KeyboardMobile />
         </div>
       )}
     </>

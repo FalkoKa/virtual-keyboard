@@ -7,6 +7,7 @@ const Key = ({
   secondary,
   isDisabled,
   styleId,
+  mobile,
 }) => {
   const [keyDown, setKeyDown] = useState(false);
 
@@ -48,7 +49,9 @@ const Key = ({
     return (
       <div
         onClick={handleKeyClick}
-        className={`key ${keyDown ? 'active' : ''}`}
+        className={`${!mobile ? 'key' : ' mobile-key'} ${
+          keyDown ? 'active' : ''
+        }`}
         id={styleId || ''}
       >
         <span>{isShift ? primary : secondary}</span>
