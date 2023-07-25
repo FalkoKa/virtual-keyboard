@@ -262,9 +262,19 @@ html {
   border-radius: 3px;
 }
 
+.keyboard-mobile {
+  display: grid;
+  grid-template-columns: repeat(60, 1fr);
+  gap: 4px;
+}
+
+.space-3 {
+  grid-column: span 3;
+}
+
 .mobile-key {
+  grid-column: span 6;
   background-color: #ffffff;
-  width: 30px;
   aspect-ratio: 1/1.25;
   color: black;
   border-radius: 5px;
@@ -276,6 +286,7 @@ html {
   align-items: center;
   border-bottom: 1px solid black;
   cursor: pointer;
+  margin: 2px 0;
 }
 
 .mobile-key:hover {
