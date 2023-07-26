@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import Key from './Key';
+import Shift from './Shift';
+import Backspace from './Backspace';
 
 const KeyboardMobile = ({ onKeyboard }) => {
   const [isShift, setIsShift] = useState(false);
@@ -168,6 +170,59 @@ const KeyboardMobile = ({ onKeyboard }) => {
         primary={'L'}
         secondary={'l'}
       />
+      <Shift setIsShift={setIsShift} mobile />
+      <div className="space-1"></div>
+      <Key
+        mobile={true}
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'Z'}
+        secondary={'z'}
+      />
+      <Key
+        mobile={true}
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'X'}
+        secondary={'x'}
+      />
+      <Key
+        mobile={true}
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'C'}
+        secondary={'c'}
+      />
+      <Key
+        mobile={true}
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'V'}
+        secondary={'v'}
+      />
+      <Key
+        mobile={true}
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'B'}
+        secondary={'b'}
+      />
+      <Key
+        mobile={true}
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'N'}
+        secondary={'n'}
+      />
+      <Key
+        mobile={true}
+        isShift={isShift}
+        onKeyboard={onKeyboard}
+        primary={'M'}
+        secondary={'m'}
+      />
+      <div className="space-1"></div>
+      <Backspace mobile />
     </div>
   );
 };

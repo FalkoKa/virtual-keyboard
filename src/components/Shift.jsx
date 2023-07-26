@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
+import { PiArrowFatUpBold } from 'react-icons/pi';
 
-const Shift = ({ onKeyboard, setIsShift }) => {
+const Shift = ({ onKeyboard, setIsShift, mobile }) => {
   const [keyDown, setKeyDown] = useState(false);
 
   useEffect(() => {
@@ -34,10 +35,10 @@ const Shift = ({ onKeyboard, setIsShift }) => {
         setKeyDown((prev) => !prev);
         setIsShift((prev) => !prev);
       }}
-      id="shift"
-      className={`key ${keyDown ? 'active' : ''}`}
+      id={`${!mobile ? 'shift' : 'mobile-shift'}`}
+      className={`${!mobile ? 'key' : 'mobile-key'} ${keyDown ? 'active' : ''}`}
     >
-      <span>Shift</span>
+      {!mobile ? <span>Shift</span> : <PiArrowFatUpBold />}
     </div>
   );
 };

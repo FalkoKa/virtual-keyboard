@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
+import { FiDelete } from 'react-icons/fi';
 
-const Backspace = ({ onKeyboard }) => {
+const Backspace = ({ onKeyboard, mobile }) => {
   const [keyDown, setKeyDown] = useState(false);
 
   useEffect(() => {
@@ -31,10 +32,10 @@ const Backspace = ({ onKeyboard }) => {
   return (
     <div
       onClick={handleKeyClick}
-      id="backspace"
-      className={`key ${keyDown ? 'active' : ''}`}
+      id={`${!mobile ? 'backspace' : 'mobile-backspace'}`}
+      className={`${!mobile ? 'key' : 'mobile-key'} ${keyDown ? 'active' : ''}`}
     >
-      <span>Backspace</span>
+      {!mobile ? <span>Backspace</span> : <FiDelete />}
     </div>
   );
 };

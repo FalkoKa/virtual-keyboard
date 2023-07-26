@@ -298,3 +298,16 @@ html {
 .mobile-key:active {
   background-color: #f1f1f1;
 }
+
+#mobile-shift,
+#mobile-backspace {
+  background-color: #abb0b9;
+  grid-column: span 8;
+  aspect-ratio: 1/1;
+}
+
+#mobile-shift:hover {
+  background-color: white;
+  box-shadow: none;
+  border-bottom: 1px solid black;
+}
